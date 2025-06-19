@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet" type="text/css"/>
     <title>Pagina web Cecilia Patiño</title>
 </head>
 <body>
-    <h1>Centro</h1>
+  <header>
+      <h1>Centro de Salud y Estética Cecilia Patiño</h1>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#formulario">Has una pregunta</a>
+      </nav>
+  </header>
+<main>
+
+  <seccion id="inicio">
+    <h2>Bienvenida</h2>
+    <p>El Centro Cecilia Patiño ofrece tratamientos para tu bienestar físico y emocional.</p>
+  </seccion>
+
+  <seccion id="servicios">
+    <h2>Tratamientos manuales</h2>   
+    <ul>
+      <li>Faciales</li>
+      <li>Corporales</li>
+    </ul>
+    <h2>Aparatologia</h2>
+    <ul>
+      <li>Faciales</li>
+      <li>Corporales</li>
+    </ul>
+  </seccion>
+
+  <section id="formulario">
+    <h2>Haz una pregunta</h2>
+    <form>
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre" name="nombre"><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mensaje">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje"required maxlength="500"
+                             type="text"
+                             placeholder="Escribe tu mensaje.... "
+                             pattern="[A-Za-z]{10,500}">
+      </textarea><br><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+</main>
+
+  <footer>
+    <p>© 2025 Cecilia Patiño. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
