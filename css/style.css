@@ -6,42 +6,34 @@ body {font-family: Georgia, 'Times New Roman', Times, serif;
       color: #333;}
 
 header {background-color: #f4e6e6;
-        padding: 20px;
         text-align: center;
         position: relative;}
 
-header h1{position: static;
-          color: #b06e6e;
-          text-align: center;
-          font-size: 2em;/*1em = al tamaño de fuente actual del elemento que lo contiene*/
-          margin-top: 10px;
-          word-wrap: break-word;} 
-   
+.caja h1{color: #b06e6e;
+         margin: 10px;
+         font-size: 2em;/*1em = al tamaño de fuente actual del elemento que lo contiene*/}
+
 .caja {display: flex;
-       justify-content: space-between;
        align-items: center;
-       flex-wrap: wrap;
+       justify-content: flex-start;
+       gap: 20px; /* separación entre logo y h1 */
        padding: 10px 20px;}
 
-.logo{display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      padding: 10px 10px;}
+.logo img { max-height: 80px;
+            height: auto;
+            width: auto;
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
 
-.logo img {height: 60px;
-           display: block;
-           border-radius: 50%;
-           box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
+nav {margin: 20px auto;
+     padding: 10px;    
+     max-width: auto;
+     height: auto;}
 
-nav {margin: 0 10px;    
-     font-weight: bold;
-     display: inline;
-     }
 nav a{display: inline;
-      padding: 3px;}
+      padding: 5px;}
 
 .boton{cursor: pointer;
-       
        text-decoration: none;
        font-size: 20px;
        border-radius: 15px;
@@ -51,7 +43,12 @@ nav a{display: inline;
 
 .boton a{font-size: medium;}
 
-.boton:active{box-shadow: inset 5px 5px 10px rgb(141, 140, 140), inset -5px 10px rgb(150, 144, 144);}                
+.boton:active{box-shadow: inset 5px 5px 10px rgb(141, 140, 140), inset -5px 10px rgb(150, 144, 144);}
+
+.google_translate_element
+
+
+section{padding: 40px;}
 
 
 
