@@ -8,25 +8,22 @@
 </head>
 <body>
   <header>
-      <h1>Centro de Salud y Estética Cecilia Patiño</h1>
+
+    <div class="caja">
+     <div class="logo">
+      <img src="./img/logo.png" alt="Logo Cecilia Patiño">
+     </div>
+    </div> 
+
+        <h1>CENTRO DE SALUD Y ESTETICA CECILIA PATIÑO</h1>
       <nav>
             <a class="boton" href="#inicio">INICIO</a>
             <a class="boton" href="#servicios">SERVICIOS</a>
             <a class="boton" href="#contacto">CONTACTO</a>
             <a class="boton" href="#formulario">HAZ UNA PREGUNTA</a>
-      </nav>
-      <div class="caja">
-       <div class="logo">
-        <img src="./img/logo.png" alt="Logo Cecilia Patiño">
-        </div> 
-      </div>
-      
-          <div class="idiomas">
-            <a href="#">ES</a>
-            <a href="#">CA</a>
-            <a href="#">EN</a>
-            <a href="#">FR</a>
-          </div>
+      </nav> 
+
+          <div id="google_translate_element"></div>
 
   </header>
 <main>
@@ -45,14 +42,19 @@
      </div>
   </section>
 
-    <section id="servicios">
+  <section id="servicios">
      <h2>Tratamientos Manuales</h2>
       <h3>Faciales</h3>
-      <div class="seccion" style="background-image:url('img/peeling.jpg')">
+      <div class="seccion" style="background-image:url('img/peeling-facial.jpg')">
         <div class="overlay"></div>
         <div class="contenido">
           <h4>Peeling facial</h4>
-          <p>Exfoliación suave que elimina células muertas, mejora la textura de la piel y aporta luminosidad.</p>
+          <p>Exfoliación suave que elimina células muertas, mejora la textura de la piel y aporta luminosidad.
+            Tipos de peeling:
+            Superficial: Exfolia la capa más externa de la piel, ideal para tratar manchas leves y mejorar la textura.
+            Medio: Penetra más profundamente, adecuado para arrugas finas y cicatrices.
+            Profundo: El más agresivo, se usa para tratar arrugas profundas y cicatrices más severas. 
+          </p>
         </div>
       </div>
 
@@ -225,29 +227,62 @@
 
   <section id="formulario">
     <h2>Haz una pregunta</h2>
-    <form>
-      <label for="nombre">Nombre:</label><br>
-      <input type="text" id="nombre"
-                         name="nombre"><br><br>
+     <form action="https://formsubmit.co/ejemplo@gmail.com" method="POST">
+          <label for="nombre">Nombre: <span style="color:red;">*</span></label>
+           <input type="text" id="nombre" name="nombre"required 
+                  pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,}"
+                  title="Introduce solo letras y espacios">
 
-      <label for="email">Email:</label><br>
-      <input type="email"name="email"
-                         placeholder="correo@mail.com" 
-                         required><br><br>
+          <label for="email">Correo electrónico: <span style="color:red;">*</span></label>
+           <input type="email" id="email" name="email"required 
+                  placeholder="nombre@correo.com">
+ 
+          <label for="mensaje">Mensaje o pregunta: <span style="color:red;">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+             <p style="font-size: 0.9em;"><span style="color:red;">*</span> Campos obligatorios</p>
 
-      <label for="mensaje">Mensaje:</label><br>
-      <textarea id="mensaje" name="mensaje"required maxlength="500"
-                            
-                             placeholder="Escribe tu mensaje.... "
-                             pattern=".{10,500}">
-      </textarea><br><br>
-      <button type="submit">Enviar</button>
-    </form>
+  <button type="submit">Enviar</button>
+ <!-- El type hidden no lo ve el usuario, campo oculto pero que Formsubmit si utiliza internamente para
+modificar el comportamiento del envio →
+Le indica a Formsubmit que, después de que el usuario haga clic en “Enviar” y el formulario se envíe
+correctamente, redirija automáticamente a la página que tú indiques en value. En el ejemplo una página de
+agradecimiento personalizada -->
+ <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+<!-- Desactiva el captcha de seguridad de Formsubmit.
+Por defecto, si no incluyes esta línea, Formsubmit podría mostrar un captcha visual (tipo “marca todas las
+bicicletas”). -->
+ <input type="hidden" name="_captcha" value="false">
+</form>
+  </section>
+  <section id="contacto">
+    <h2>CONTACTO</h2>
+    <p><strong>Direccion:</strong>Carrer Galileu, 306, Local 1, 08028 Barcelona</p>
+    <p><strong>Telefono:</strong>666280282</p>
+    <p><strong>Email:</strong>ceciliapatinoestetica@gmail.com</p>
+    <p><strong>Horario:</strong>De lunes a vernes, de 08:00 a 20:00</p>
+    <p><strong>Reservar cita:</strong>
+    <a href="https://booksy.com/es-es/113273_salud-i-estetica-cecilia-patino_medicina-estetica_48863_barcelona"
+       target="_blank">Reserva  en Booksy</a></p>
   </section>
 </main>
 
   <footer>
     <p>© 2025 Cecilia Patiño. Todos los derechos reservados.</p>
+    <div class="redesSociales">
+      <a href="https://www.instagram.com/cecilia.patino.barcelona/" target="_blank">Instagram</a>
+       <a href="https://www.facebook.com/cecilia.patino.barcelona/" target="_blank">Facebook</a>
+    </div>
   </footer>
+  
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+      pageLanguage: 'es', // idioma original de tu página
+      includedLanguages: 'es,ca,en,fr', // idiomas a traducir
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+       'google_translate_element')}   
+  </script>
+<script type="text/javascript"
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
