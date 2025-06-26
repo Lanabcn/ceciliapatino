@@ -2,38 +2,41 @@
 body {font-family: Georgia, 'Times New Roman', Times, serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
-      color: #333;}
+      color: #333;
+      text-align: center;
+      background-color: rgb(241, 235, 243);}
 
-header {background-color: #f4e6e6;
+header {background-color:transparent;
         text-align: center;
         position: relative;}
 
-.caja h1{color: #b06e6e;
+.caja h1{color: #7b4499;
+         padding-left: 30px;
          margin: 10px;
-         font-size: 2em;/*1em = al tamaño de fuente actual del elemento que lo contiene*/}
-
+         font-size: 2.5em;/*1em = al tamaño de fuente actual del elemento que lo contiene*/}
+        
 .caja {display: flex;
        align-items: center;
        justify-content: flex-start;
        gap: 20px; /* separación entre logo y h1 */
        padding: 10px 20px;}
 
-.logo img { max-height: 80px;
-            height: auto;
-            width: auto;
-            border-radius: 50%;
-            box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
+.logo img{max-height: 150px;
+          height: auto;
+          width: auto;
+          border-radius: 50%;
+          box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
 
-nav {margin: 20px auto;
-     padding: 10px;    
-     max-width: auto;
-     height: auto;}
+nav{margin: 20px auto;
+    padding: 10px;    
+    max-width: auto;
+    height: auto;}
 
 nav a{display: inline;
       padding: 5px;}
 
-.boton{cursor: pointer;
+.boton{display: inline-flex;
+       cursor: pointer;
        text-decoration: none;
        font-size: 20px;
        border-radius: 15px;
@@ -41,15 +44,78 @@ nav a{display: inline;
        background-color: #ececec;
        box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
 
-.boton a{font-size: medium;}
-
+.boton a{font-size: medium;
+         color: #7b4499;
+         font-weight: bold;}
+.boton:not(:has(#google_translate_element)){font-size: 20px;}
 .boton:active{box-shadow: inset 5px 5px 10px rgb(141, 140, 140), inset -5px 10px rgb(150, 144, 144);}
 
-.google_translate_element
+#google_translate_element{font-size: 0;}
 
+.seccion{background-size: cover;
+         background-position: center;
+         position: relative;
+         padding: 10px 10px;
+         margin-bottom: 20px;}
 
-section{padding: 40px;}
+.overlay{position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0,0,0,0.4); /* oscurece imagen para que el texto se lea */}
 
+.contenido{color: #ffffff;
+           max-width: 90%;
+           margin: auto;
+           font-size: 1.6em;
+           line-height: 1.6;/*especio entre lineas para facilitar la lectura*/
+           padding: 2em;
+           position: relative;
+           z-index: 2; /* Esto asegura que el texto esté por encima de la imagen de fondo (overlay)*/}
+           
+form{max-width: 600px;
+     margin: auto;}
+form input, textarea{width: 100%;
+                     padding: 10px;
+                     margin: 8px 0 20px;
+                     border: 3px solid rgb(117, 106, 120);
+                     border-radius: 20px;
+                     box-shadow: 5px 5px 10px rgb(184, 182, 182), -5px -5px 10px rgb(159, 157, 157);}
+form button{cursor: pointer;
+            text-decoration: none;
+            font-size: 30px;
+            padding: 10px 20px;
+            color: #ffffff;
+            border: 3px solid rgb(117, 106, 120);
+            border-radius: 15px;
+            background-color: rgb(83, 183, 113);
+            box-shadow: 5px 5px 10px rgb(184, 182, 182), -5px -5px 10px rgb(159, 157, 157);}
+form button:active{box-shadow: inset 5px 5px 10px rgb(141, 140, 140), inset -5px 10px rgb(150, 144, 144);}
+
+footer{padding: 20px;
+       margin: auto;}
+
+.redesSociales{display: flex;
+               justify-content: center;
+               gap: 1.5em;
+               margin-top: 1em;}
+.redesSociales a{border-radius: 15px;
+                 border: none;
+                 background-color: #ececec;
+                 box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;
+                 padding: 0.5em 1em;               
+                 text-decoration: none;
+                 font-weight: bold;
+                 display: flex;
+                 align-items: center;
+                 gap: 0.5em;
+                 transition: background-color 0.3s;}
+.redesSociales a:hover{box-shadow: inset 5px 5px 10px rgb(141, 140, 140), inset -5px 10px rgb(150, 144, 144);}
+
+.diseño{color:#7b4499;
+        text-align: right;
+        text-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
 
 
 
