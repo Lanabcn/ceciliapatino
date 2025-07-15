@@ -4,14 +4,22 @@ body {font-family: Georgia, 'Times New Roman', Times, serif;
       padding: 0;
       color: #333;
       text-align: center;
-      background-color: rgb(241, 235, 243);}
+      background-color:rgb(255, 245, 238);}
 
-header {background-color:transparent;
-        text-align: center;
-        position: relative;}
+header {text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        padding: 10px;
+        z-index: 50;
+        background-color: rgb(238, 236, 236);}
+main{margin-top: 250px;
+     padding: 20px;}
 
-.caja h1{color: #7b4499;
-         padding-left: 30px;
+.caja h1{color:rgb(172, 150, 172);
+         padding: 10px;
          margin: 10px;
          font-size: 2.5em;/*1em = al tamaño de fuente actual del elemento que lo contiene*/}
         
@@ -19,21 +27,23 @@ header {background-color:transparent;
        align-items: center;
        justify-content: flex-start;
        gap: 20px; /* separación entre logo y h1 */
-       padding: 10px 20px;}
+       padding: 10px;
+       height: 150px;}
 
-.logo img{max-height: 150px;
+.logo img{max-height: 170px;
           height: auto;
           width: auto;
           border-radius: 50%;
           box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
 
-nav{margin: 20px auto;
-    padding: 10px;    
-    max-width: auto;
-    height: auto;}
+nav{padding: 5px;   
+    max-width: 80%;
+    height: auto;
+    display: inline-block;}
 
 nav a{display: inline;
-      padding: 5px;}
+      padding: 10px;
+      margin-left: 5px;}
 
 .boton{display: inline-flex;
        cursor: pointer;
@@ -73,7 +83,7 @@ nav a{display: inline;
            padding: 2em;
            position: relative;
            z-index: 2; /* Esto asegura que el texto esté por encima de la imagen de fondo (overlay)*/}
-           
+ul{list-style: none;}          
 form{max-width: 600px;
      margin: auto;}
 form input, textarea{width: 100%;
@@ -104,6 +114,7 @@ footer{padding: 20px;
                  border: none;
                  background-color: #ececec;
                  box-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;
+                 color: rgb(192, 114, 180);
                  padding: 0.5em 1em;               
                  text-decoration: none;
                  font-weight: bold;
@@ -113,9 +124,10 @@ footer{padding: 20px;
                  transition: background-color 0.3s;}
 .redesSociales a:hover{box-shadow: inset 5px 5px 10px rgb(141, 140, 140), inset -5px 10px rgb(150, 144, 144);}
 
-.diseño{color:#7b4499;
+.diseño{color:#af5ab9;
         text-align: right;
-        text-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;}
+        text-shadow: 5px 5px 10px rgb(99, 97, 97), -5px -5px 10px gray;
+        font-size: small;}
         
 
            @media (max-width: 768px) 
